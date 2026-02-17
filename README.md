@@ -22,7 +22,7 @@ This application consists of an interactive website that will track user events 
 - Public deployment for real-world data collection
 
 ## Project Structure
-
+```
 ├── index.html
 ├── styles.css
 ├── script.js
@@ -43,7 +43,7 @@ This application consists of an interactive website that will track user events 
     ├── index.html
     ├── styles.css
     └── script.js
-
+```
 ## Author
 
 ** Julia Sorgen **
