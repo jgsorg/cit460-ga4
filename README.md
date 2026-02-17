@@ -36,9 +36,9 @@ This application consists of an interactive website that will track user events 
 │ ├── style.css
 │ └── script.js
 └── faq/
-├── index.html
-├── style.css
-└── script.js
+    ├── index.html
+    ├── style.css
+    └── script.js
 
 ## Author
 
