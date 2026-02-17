@@ -26,18 +26,22 @@ This application consists of an interactive website that will track user events 
 ├── index.html
 ├── styles.css
 ├── script.js
+├──images/
+|  ├── images go here...
 ├── README.md
 ├──portfolio/
+| ├──images/
+| |  ├── images go here...
 │ ├── index.html
-│ ├── style.css
+│ ├── styles.css
 │ └── script.js
 ├── contact/
 │ ├── index.html
-│ ├── style.css
+│ ├── styles.css
 │ └── script.js
 └── faq/
     ├── index.html
-    ├── style.css
+    ├── styles.css
     └── script.js
 
 ## Author
