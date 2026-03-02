@@ -4,8 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figma Embed</title>
+
+    <style>
+        body {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            justify-content: space-around;
+        }
+        .right {
+            max-width: 400px;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/GLoYu0b1V5rY0AszdaDFHn/Maeg-s?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+    <div class="left">
+         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/GLoYu0b1V5rY0AszdaDFHn/Maeg-s?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+    </div>
+    <div class="right">
+
+    <h1>GA4 Events</h1>
+    <div class="top">
+        <h2>Main Page</h2>
+        <ul>
+            <li>Page Views</li>
+            <li>Button Clicks</li>
+            <li>    ex. which sections are users most interested in?</li>
+            <li>Form Submissions</li>
+            <li>    ex. how many users actually contact via form vs. direct email/social links</li>
+            <li>Scroll Depth</li>
+        </ul>
+    </div>
+    <div class="bottom">
+        <h2>Product Page</h2>
+        <ul>
+            <li>Filter Clicks</li>
+            <li>Time on Page</li>
+            <li>Interactions per product / which products get most interaction</li>
+        </ul>
+    </div>
 </body>
 </html>
