@@ -30,6 +30,7 @@ body{
     justify-content: center;
     background: radial-gradient(circle at top left, var(--cream) 0, var(--teal) 60%);
     color: var(--cream);
+    flex-direction: column;
 }
 
 .wrapper{
@@ -56,3 +57,23 @@ body{
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
+
+button{
+    background-color: transparent;
+    border: 2px solid var(--cream);
+    color: var(--cream);
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: var(--cream);
+    color: var(--teal);
+    transform: scale(1.05);
+}
+a{
+    color: var(--cream);
+    text-decoration: none;
+}
