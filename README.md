@@ -12,7 +12,6 @@ This application consists of an interactive website that will track user events 
 - CSS
 - JavaScript
 - Google Analytics 4
-- GitHub Pages (deployment)
 
 ## Features
 
@@ -21,7 +20,7 @@ This application consists of an interactive website that will track user events 
 - Event tracking for user actions
 - Public deployment for real-world data collection
 
-## Project Structure
+## Project Structure 
 ```
 ├── index.html
 ├── styles.css
@@ -29,20 +28,15 @@ This application consists of an interactive website that will track user events 
 ├──images/
 |  ├── images go here...
 ├── README.md
-├──portfolio/
+├──product/
 | ├──images/
 | |  ├── images go here...
 │ ├── index.html
 │ ├── styles.css
 │ └── script.js
-├── contact/
-│ ├── index.html
-│ ├── styles.css
-│ └── script.js
-└── faq/
-    ├── index.html
-    ├── styles.css
-    └── script.js
+└── 
+
+Structure is not 100% accurate as the server hosting I am using has github repo syncing, in order for the site to display as I want it for the time being, there is a placeholder index.html a directory above the main files.
 ```
 ## Author
 
