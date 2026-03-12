@@ -12,6 +12,8 @@
   padding: 0;
 }
 
+/** Nav Section **/
+
 a {
   text-decoration: none;
 }
@@ -55,6 +57,9 @@ nav ul li a {
   color: var(--green);
   font-weight: 500;
 }
+
+
+/** First Section - Vector, Image, Title **/
 
 .first {
   position: relative;
@@ -129,7 +134,7 @@ nav ul li a {
   color: var(--cream);
   font-size: 6rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  font-weight: 400;
+  font-weight: 500;
 
 }
 
@@ -152,4 +157,125 @@ nav ul li a {
 
 .dots-bottom {
   right: 23%; bottom: 25%;
+}
+
+/** About Me **/
+
+.second{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--green);
+    width: 100%;
+    height:100vh;
+}
+.second h2{
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--cream);
+    margin-top: 3rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+
+}
+.second p{
+    font-size: 1.5rem;
+    color: var(--cream);
+    width: 100%;
+    text-align: left;
+    line-height: 2;
+}
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: 2rem;
+}
+.about-content img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/** Available Items **/
+
+.third {
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  height: 100vh;
+  width: 100%;
+}
+
+.third-left {
+  background: var(--cream);
+  padding: 90px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  
+}
+
+.third-left h2 {
+  font-size: clamp(48px, 6vw, 84px);
+  font-weight: 400;
+  color: #000;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.third a{
+    width: 220px;
+    align-self: center;
+}
+.third-btn {
+  margin-top: 18px;
+  width: 220px;
+  padding: 16px 22px;
+  border: none;
+  border-radius: 12px;
+  background: var(--green);
+  color: var(--cream);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.third-btn:hover {
+  background: var(--indigo);
+  transition: ease-in-out 0.3s;
+}
+
+.third-right {
+  background: var(--indigo);
+  padding: 70px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gridwrapper {
+  width: min(760px, 100%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.grid {
+  background: #f5f2f8;
+  border-radius: 16px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
 }
