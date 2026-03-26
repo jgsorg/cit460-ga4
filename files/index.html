@@ -18,7 +18,7 @@
     <meta property="og:title" content="Pinecreek Ceramics - Handmade Ceramics by Maegan McLaughlin">
     <meta property="og:description" content="Discover the unique handmade ceramics created by Maegan McLaughlin.">
 </head>
-
+<script src="https://kit.fontawesome.com/8ac7328b3d.js" crossorigin="anonymous"></script>
 <body>
     <nav>
         <img src="images/logo.svg" alt="Pinecreek Ceramics Logo" class="logo">
@@ -92,9 +92,87 @@
         </div>
     </div>
     <!--Archived Items-->
-    <div class="fourth"></div>
+    <div class="fourth">
+        
+        <div class="fourth-left">
+            <div class="gridwrapper">
+                <div class="grid"><img src="images/placeholder.png" alt="Item 1"></div>
+                <div class="grid"><img src="images/placeholder.png" alt="Item 2"></div>
+                <div class="grid"><img src="images/placeholder.png" alt="Item 3"></div>
+                <div class="grid"><img src="images/placeholder.png" alt="Item 4"></div>
+                <div class="grid"><img src="images/placeholder.png" alt="Item 5"></div>
+                <div class="grid"><img src="images/placeholder.png" alt="Item 6"></div>
+            </div>
+        </div>
+        <div class="fourth-right">
+            <h2>Archived<br>Items</h2>
+            
+            <a href="/products/#archived"><button class="fourth-btn">View More</button></a>
+        </div>
+    </div>
     <!--Contact-->
-    <div class="fifth" id="contact"></div>
+    <div class="fifth">
+        <img class="first-vector" src="images/lines2.svg" alt="Blue/indigo lines vector" aria-hidden="true">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via social media or email if you are interested in a commission, or have any questions!</p>
+        <div class="content">
+            <div class="left">
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-instagram"></i><a>link go here</a>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-facebook"></i><a>link go here</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i><a>email go here</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <form
+                            id="contactForm"
+                            action="https://formspree.io/f/mgolaaee"
+                            method="POST">
+                            <h3>Email Me</h3>
+                            <label>
+                                <span>Name</span>
+                                <input
+                                    name="name"
+                                    placeholder="Your name"
+                                    autocomplete="name"
+                                    required />
+                            </label>
 
+                            <label>
+                                <span>Email</span>
+                                <input
+                                    name="email"
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required />
+                            </label>
+
+                            <label>
+                                <span>Message</span>
+                                <textarea
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Tell me about your idea or question!"
+                                    required></textarea>
+                            </label>
+
+                            <button class="formbtn" type="submit" style="margin-top: 15px">
+                                Send message
+                            </button>
+                            <p class="small" id="formStatus" aria-live="polite"></p>
+                        </form>
+            </div>
+        </div>
+    </div>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+
+	<script src="script.js"></script>
 </body>
 </html>

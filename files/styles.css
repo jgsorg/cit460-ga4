@@ -256,6 +256,72 @@ nav ul li a {
   justify-content: center;
 }
 
+/** Archived Items **/
+
+.fourth{
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  height: 100vh;
+  width: 100%;
+}
+
+.fourth-left{
+  grid-column: 1;
+  background: var(--green);
+  padding: 70px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fourth-right{
+  grid-column: 2;
+  background: var(--cream);
+  padding: 90px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+.fourth-right h2{
+  font-size: clamp(48px, 6vw, 84px);
+  font-weight: 400;
+  color: #000;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.fourth a{
+  width: 220px;
+  align-self: center;
+}
+
+.fourth-btn{
+  margin-top: 18px;
+  width: 220px;
+  padding: 16px 22px;
+  border: none;
+  border-radius: 12px;
+  background: var(--indigo);
+  color: var(--cream);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.fourth-btn:hover{
+  background: var(--green);
+  transition: ease-in-out 0.3s;
+}
+
+
+
+
+/** Grid, used in third + fourth sections **/
+
 .gridwrapper {
   width: min(760px, 100%);
   display: grid;
@@ -278,4 +344,27 @@ nav ul li a {
   height: 100%;
   object-fit: cover;
   opacity: 0.6;
+}
+
+/** Contact **/
+
+.fifth{
+  display:flex;
+  background-color: var(--indigo);
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+
+.fifth .right{
+  width: 50%;
+}
+.fifth .left{
+  width: 50%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background: linear-gradient(#F7F1E1, #f7f1e174);
 }
