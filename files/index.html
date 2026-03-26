@@ -112,62 +112,50 @@
     </div>
     <!--Contact-->
     <div class="fifth">
-        <img class="first-vector" src="images/lines2.svg" alt="Blue/indigo lines vector" aria-hidden="true">
+        <img class="second-vector" src="images/lines2.svg" alt="Blue/indigo lines vector" aria-hidden="true">
         <h2>Contact Me</h2>
         <p>Feel free to reach out via social media or email if you are interested in a commission, or have any questions!</p>
         <div class="content">
             <div class="left">
+                <p>Click the icons to visit my social media pages!</p>
                 <ul>
                     <li>
-                        <i class="fa-brands fa-instagram"></i><a>link go here</a>
+                        <a href="https://www.instagram.com/pinecreekceramics/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
                     </li>
                     <li>
-                        <i class="fa-brands fa-facebook"></i><a>link go here</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i><a>email go here</a>
+                        <a href="https://www.facebook.com/profile.php?id=100090011148729#" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a>
                     </li>
                 </ul>
             </div>
             <div class="right">
-                <form
-                            id="contactForm"
-                            action="https://formspree.io/f/mgolaaee"
-                            method="POST">
-                            <h3>Email Me</h3>
-                            <label>
-                                <span>Name</span>
-                                <input
-                                    name="name"
-                                    placeholder="Your name"
-                                    autocomplete="name"
-                                    required />
-                            </label>
+                <form id="contactForm" class="card" action="https://formspree.io/f/mgolaaee" method="POST">
+                    <h3>Email Me</h3>
 
-                            <label>
-                                <span>Email</span>
-                                <input
-                                    name="email"
-                                    type="email"
-                                    placeholder="you@example.com"
-                                    autocomplete="email"
-                                    required />
-                            </label>
+                    <div class="two-col">
+                        <label>
+                        <span>First Name</span>
+                        <input name="firstName" placeholder="First Name" autocomplete="given-name" required />
+                        </label>
 
-                            <label>
-                                <span>Message</span>
-                                <textarea
-                                    name="message"
-                                    rows="5"
-                                    placeholder="Tell me about your idea or question!"
-                                    required></textarea>
-                            </label>
+                        <label>
+                        <span>Last Name</span>
+                        <input name="lastName" placeholder="Last Name" autocomplete="family-name" required />
+                        </label>
+                    </div>
 
-                            <button class="formbtn" type="submit" style="margin-top: 15px">
-                                Send message
-                            </button>
-                            <p class="small" id="formStatus" aria-live="polite"></p>
-                        </form>
+                    <label>
+                        <span>Email Address</span>
+                        <input name="email" type="email" placeholder="Email Address" autocomplete="email" required />
+                    </label>
+
+                    <label>
+                        <span>Message</span>
+                        <textarea name="message" rows="7" placeholder="Message..." required></textarea>
+                    </label>
+
+                    <button class="formbtn" type="submit">Send message</button>
+                    <p class="small" id="formStatus" aria-live="polite"></p>
+                </form>
             </div>
         </div>
     </div>

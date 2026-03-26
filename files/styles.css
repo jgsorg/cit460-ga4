@@ -5,7 +5,9 @@
   --green: #1E3A2B;
   --indigo: #1E1A43;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -347,6 +349,14 @@ nav ul li a {
 }
 
 /** Contact **/
+.fifth .right,
+.fifth .left,
+.fifth h2,
+.fifth p,
+.fifth .content {
+  position: relative;
+  z-index: 1;
+}
 
 .fifth{
   display:flex;
@@ -354,6 +364,72 @@ nav ul li a {
   height: 100vh;
   width: 100%;
   align-items: center;
+  position: relative;
+  overflow:hidden;
+  flex-direction: column;
+  color: var(--cream);
+}
+.fifth h2{
+  font-size: clamp(48px, 6vw, 84px);
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+.fifth p{
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  line-height: 2;
+  margin: 20px;
+}
+.content{
+  display: flex;
+  width: 100%;
+}
+.content .left{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.content ul li{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 18px;
+  padding: 3rem;
+}
+
+.content ul li i{
+  flex: 0 0 5rem;
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  place-items: center;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--cream);
+  padding: 0;
+  margin: 0;
+}
+
+.content ul li a{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--cream);
+  font-size: 2rem;
+  line-height: 1;
 }
 
 .fifth .right{
@@ -362,9 +438,98 @@ nav ul li a {
 .fifth .left{
   width: 50%;
 }
-form{
+
+
+#contactForm{
+  --field-max: 420px;
   display: flex;
   flex-direction: column;
   border-radius: 15px;
   background: linear-gradient(#F7F1E1, #f7f1e174);
+  color: var(--indigo);
+  width: 50%;
+  align-items: center;
+  padding: 40px;
+}
+
+#contactForm h3{
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#contactForm label{
+  width: min(100%, var(--field-max));
+  margin: 10px 0;
+}
+
+#contactForm input,
+#contactForm textarea{  
+  width: 100%;
+  padding: 12px;
+  margin: auto;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+#contactForm .two-col{
+  width: min(100%, var(--field-max));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+#contactForm .two-col label{
+  width: 100%;
+  margin: 0;
+  min-width: 0;
+}
+
+#contactForm .two-col input{
+  width: 100%;
+  min-width: 0;
+}
+.second-vector{
+  position: absolute;
+  left: 0;
+  bottom: 0;              
+  width: 100%;
+  height: auto;
+  z-index: 0;             
+  pointer-events: none;
+}
+.formbtn{
+  margin-top: 18px;
+  margin-bottom: 0;
+  width: 220px;
+  padding: 16px 22px;
+  border: none;
+  border-radius: 12px;
+  background: var(--indigo);
+  color: var(--cream);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.formbtn:hover{
+  background: var(--green);
+  transition: ease-in-out 0.3s;
+}
+#formStatus{
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin: 0;
+}
+
+/** confetti canva lol **/
+#confetti{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  pointer-events: none;
+  display: none;
 }

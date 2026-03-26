@@ -1,38 +1,11 @@
-// contact form
+// confetti code adapted from my own site, juliasorgen.com :p
+
 const form = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 
-form.addEventListener('submit', async (e) => {
-	e.preventDefault();
-	formStatus.textContent = 'Sending...';
-
-	const data = new FormData(form);
-
-	try {
-		const res = await fetch(form.action, {
-			method: form.method || 'POST',
-			body: data,
-			headers: {Accept: 'application/json'},
-		});
-
-		if (res.ok) {
-			formStatus.textContent = 'Sent! Thanks — I’ll reply soon.';
-			launchConfetti();
-			form.reset();
-		} else {
-			const out = await res.json().catch(() => null);
-			formStatus.textContent =
-				out?.errors?.[0]?.message ||
-				'Oops...something went wrong. Please try again or email me directly.';
-		}
-	} catch {
-		formStatus.textContent = 'Network error—please try again in a moment.';
-	}
-});
-
-// confetti!!!!!!!!!!
 const canvas = document.getElementById('confetti');
 const ctx = canvas.getContext('2d');
+canvas.style.display = 'none';
 
 function resizeCanvas() {
 	canvas.width = window.innerWidth * devicePixelRatio;
@@ -58,13 +31,13 @@ function launchConfetti() {
 	let t = 0;
 	function frame() {
 		t++;
-		ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 		pieces.forEach((p) => {
 			p.x += p.vx;
 			p.y += p.vy;
 			p.rot += p.vr;
-			p.vy += 0.03; // gravity
+			p.vy += 0.03;
 
 			ctx.save();
 			ctx.translate(p.x, p.y);
@@ -75,7 +48,39 @@ function launchConfetti() {
 		});
 
 		if (t < 140) requestAnimationFrame(frame);
-		else ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+		else {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			canvas.style.display = 'none';
+		}
 	}
 	frame();
 }
+
+form.addEventListener('submit', async (e) => {
+	e.preventDefault();
+	formStatus.textContent = 'Sending...';
+
+	const data = new FormData(form);
+
+	try {
+		const res = await fetch(form.action, {
+			method: form.method || 'POST',
+			body: data,
+			headers: { Accept: 'application/json' },
+		});
+
+		if (res.ok) {
+			formStatus.textContent = 'Sent! Thanks — I’ll reply soon.';
+			canvas.style.display = 'block';
+			launchConfetti();
+			form.reset();
+		} else {
+			const out = await res.json().catch(() => null);
+			formStatus.textContent =
+				out?.errors?.[0]?.message ||
+				'Oops...something went wrong. Please try again or email me directly.';
+		}
+	} catch {
+		formStatus.textContent = 'Network error—please try again in a moment.';
+	}
+});
