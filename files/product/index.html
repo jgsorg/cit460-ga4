@@ -1,25 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EETVY8RE46"></script>
-    <script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EETVY8RE46"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-EETVY8RE46');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinecreek Ceramics</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="keywords" content="ceramics, handmade, pottery, Maegan McLaughlin, art, functional art">
-    <meta property="og:title" content="Pinecreek Ceramics - Handmade Ceramics by Maegan McLaughlin">
-    <meta property="og:description" content="Discover the unique handmade ceramics created by Maegan McLaughlin.">
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinecreek Ceramics</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/8ac7328b3d.js" crossorigin="anonymous"></script>
+
+
+  <script src="script.js" defer></script>
+
+  <meta name="keywords" content="ceramics, handmade, pottery, Maegan McLaughlin, art, functional art" />
+  <meta property="og:title" content="Pinecreek Ceramics - Handmade Ceramics by Maegan McLaughlin" />
+  <meta property="og:description" content="Discover the unique handmade ceramics created by Maegan McLaughlin." />
 </head>
 
 <body>
-    
+  <!-- main nav -->
+  <nav>
+    <img src="images/logo.svg" alt="Pinecreek Ceramics Logo" class="logo" />
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- avail / archive -->
+  <section class="hero">
+    <div class="hero-col hero-left" id="available">
+      <h1>Available<br />Items</h1>
+      <button class="btn btn-dark" id="availbtn" type="button">Scroll down...</button>
+    </div>
+
+    <div class="hero-col hero-right" id="archived">
+      <h1>Archived<br />Items</h1>
+      <button class="btn btn-light" id="archivedbtn" type="button">Click Here!</button>
+    </div>
+
+    <!-- moving arrow -->
+    <div class="hero-arrow" aria-hidden="true">
+      <i class="fa-solid fa-arrow-down"></i>
+    </div>
+  </section>
+
+  <!-- category nav -->
+  <nav class="itemsnav" aria-label="Product categories">
+    <ul>
+      <li><button class="chip is-active" type="button">All</button></li>
+      <li><button class="chip" type="button">Mugs</button></li>
+      <li><button class="chip" type="button">Vases</button></li>
+      <li><button class="chip" type="button">Dishes</button></li>
+      <li><button class="chip" type="button">Tumblers</button></li>
+      <li><button class="chip" type="button">Specialty</button></li>
+      <li><button class="chip" type="button">Misc.</button></li>
+    </ul>
+  </nav>
+
+  <!-- product area -->
+  <main class="grid-wrap" id="products">
+    <section class="product-grid" aria-label="Products">
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="caption">Name - Price</div>
+      </article>
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="caption">Name - Price</div>
+      </article>
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="caption">Name - Price</div>
+      </article>
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="caption">Name - Price</div>
+      </article>
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="caption">Name - Price</div>
+      </article>
+    </section>
+  </main>
 </body>
 </html>

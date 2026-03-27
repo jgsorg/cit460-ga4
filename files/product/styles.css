@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --cream: #FFFBEF;
+  --green: #1E3A2B;
+  --indigo: #1E1A43;
+}
+
+html { scroll-behavior: smooth; }
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cream);
+  color: var(--indigo);
+}
+
+
+a { text-decoration: none; }
+
+.logo {
+  height: 70%;
+  margin-left: 7%;
+}
+
+nav {
+  background-color: var(--green);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+  justify-content: space-around;
+}
+
+nav ul li {
+  padding: 10px 15px;
+  margin: 30px;
+  border-radius: 5px;
+  background-color: #f7f1e177;
+  border: var(--cream) 1px solid;
+}
+
+nav ul li:hover {
+  background-color: var(--cream);
+  transition: ease-in-out 0.3s;
+  transform: translateY(-5px);
+}
+
+nav ul li a {
+  color: var(--green);
+  font-weight: 500;
+}
+
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 420px;
+}
+
+.hero-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.hero-col h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.hero-left {
+  background: var(--cream);
+  color: var(--indigo);
+}
+
+.hero-right {
+  background: var(--indigo);
+  color: #fff;
+}
+
+
+.btn {
+  border: none;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.08);
+}
+
+.btn-dark {
+  background: var(--indigo);
+  color: #fff;
+}
+
+.btn-light {
+  background: var(--cream);
+  color: var(--indigo);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  transition: transform 120ms ease;
+}
+
+
+.hero-arrow {
+  position: absolute;
+  bottom: 28px;
+  left: 25%;                 
+  transform: translateX(-50%);
+  font-size: 2.2rem;
+  color: var(--indigo);
+  transition: left 220ms ease, color 220ms ease;
+}
+
+.hero.is-archived .hero-left {
+  background: var(--indigo);
+  color: #fff;
+}
+
+.hero.is-archived .hero-right {
+  background: var(--cream);
+  color: var(--indigo);
+}
+
+
+.hero.is-archived .hero-arrow {
+  left: 75%;
+  color: var(--indigo); 
+}
+
+
+.hero.is-archived .hero-left .btn-dark {
+  background: var(--cream);
+  color: var(--indigo);
+}
+
+.hero.is-archived .hero-right .btn-light {
+  background: var(--indigo);
+  color: #fff;
+}
+
+
+.itemsnav {
+  background: var(--indigo);
+  height: auto;
+  padding: 10px 12px;
+  display: block; 
+}
+
+.itemsnav ul {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0 6px;
+}
+
+.itemsnav li {
+  margin: 0;      
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.chip {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  min-width: 74px;
+}
+
+.chip:hover {
+    background: rgba(255, 255, 255, 0.18);
+    color: #1E1A43;
+ }
+
+.chip.is-active { 
+    background: rgba(255, 255, 255, 0.22); 
+}
+
+
+.grid-wrap {
+  padding: 28px 22px 60px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.thumb {
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  background: rgba(30, 26, 67, 0.08);
+  border: 1px solid rgba(30, 26, 67, 0.12);
+}
+
+.caption {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: var(--indigo);
+}
