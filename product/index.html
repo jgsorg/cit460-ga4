@@ -23,6 +23,7 @@
   <meta name="keywords" content="ceramics, handmade, pottery, Maegan McLaughlin, art, functional art" />
   <meta property="og:title" content="Pinecreek Ceramics - Handmade Ceramics by Maegan McLaughlin" />
   <meta property="og:description" content="Discover the unique handmade ceramics created by Maegan McLaughlin." />
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -30,14 +31,14 @@
   <nav>
     <img src="images/logo.svg" alt="Pinecreek Ceramics Logo" class="logo" />
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="/products">Products</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <a href="../"><li>About</li></a>
+      <a href="#product"><li>Products</li></a>
+      <a href="../#contact"><li>Contact</li></a>
     </ul>
   </nav>
 
   <!-- avail / archive -->
-  <section class="hero">
+  <section class="hero" id="product">
     <div class="hero-col hero-left" id="available">
       <h1>Available<br />Items</h1>
       <button class="btn btn-dark" id="availbtn" type="button">Scroll down...</button>
@@ -56,40 +57,93 @@
 
   <!-- category nav -->
   <nav class="itemsnav" aria-label="Product categories">
-    <ul>
-      <li><button class="chip is-active" type="button">All</button></li>
-      <li><button class="chip" type="button">Mugs</button></li>
-      <li><button class="chip" type="button">Vases</button></li>
-      <li><button class="chip" type="button">Dishes</button></li>
-      <li><button class="chip" type="button">Tumblers</button></li>
-      <li><button class="chip" type="button">Specialty</button></li>
-      <li><button class="chip" type="button">Misc.</button></li>
-    </ul>
-  </nav>
+  <ul>
+    <li><button class="chip is-active" type="button" data-filter="all">All</button></li>
+    <li><button class="chip" type="button" data-filter="mugs">Mugs</button></li>
+    <li><button class="chip" type="button" data-filter="vases">Vases</button></li>
+    <li><button class="chip" type="button" data-filter="dishes">Dishes</button></li>
+    <li><button class="chip" type="button" data-filter="tumblers">Tumblers</button></li>
+    <li><button class="chip" type="button" data-filter="planters">Planters</button></li>
+    <li><button class="chip" type="button" data-filter="misc">Misc.</button></li>
+  </ul>
+</nav>
 
   <!-- product area -->
   <main class="grid-wrap" id="products">
     <section class="product-grid" aria-label="Products">
-      <article class="card">
-        <div class="thumb"></div>
-        <div class="caption">Name - Price</div>
+
+      <article class="card" data-status="available" data-category="dishes">
+        <div class="thumb"><img src="images/mixingBowl.png" alt="Blue medium sized mixing bowl"></div>
+        <div class="caption">Medium Mixing Bowl - $40</div>
       </article>
-      <article class="card">
-        <div class="thumb"></div>
-        <div class="caption">Name - Price</div>
+      <article class="card" data-status="available" data-category="dishes">
+        <div class="thumb"><img src="images/SMmixingBowl.png" alt="Blue-green small mixing bowl"></div>
+        <div class="caption">Small Mixing Bowl - $35</div>
       </article>
-      <article class="card">
-        <div class="thumb"></div>
-        <div class="caption">Name - Price</div>
+      <article class="card" data-status="available" data-category="planters">
+        <div class="thumb"><img src="images/SMplanter.png" alt="Earthy-green toned small planter"></div>
+        <div class="caption">Small Planter w/ Chain Hole - $25</div>
       </article>
-      <article class="card">
-        <div class="thumb"></div>
-        <div class="caption">Name - Price</div>
+      <article class="card" data-status="available" data-category="misc">
+        <div class="thumb"><img src="images/trinketDish.png" alt="Small pink trinket bowl"></div>
+        <div class="caption">Small Trinket Bowl - $10</div>
+        <div class="caption" style="color: red;">NOT FOOD SAFE</div>
       </article>
-      <article class="card">
-        <div class="thumb"></div>
-        <div class="caption">Name - Price</div>
+      <article class="card" data-status="available" data-category="mugs">
+        <div class="thumb"><img src="images/SMmug.png" alt="Green and brown small mug"></div>
+        <div class="caption">Small Mug - $15</div>
       </article>
+      <article class="card" data-status="available" data-category="misc">
+        <div class="thumb"><img src="images/ringHolder.png" alt="Pink ring holder"></div>
+        <div class="caption">Ring Dish - $10</div>
+      </article>
+      <article class="card" data-status="available" data-category="vases">
+        <div class="thumb"><img src="images/vase.png" alt="Green and brown vase"></div>
+        <div class="caption">Vase - $20</div>
+      </article>
+      <article class="card" data-status="available" data-category="dishes">
+        <div class="thumb"><img src="images/coffeePourOver.png" alt="Coffee pour-over"></div>
+        <div class="caption">Coffe Pour-Over - $25</div>
+      </article>
+      <article class="card" data-status="available" data-category="dishes">
+        <div class="thumb"><img src="images/oilBottle.png" alt="Earthy white and ceramic oil bottle"></div>
+        <div class="caption">Oil Pour Bottle - $30</div>
+      </article>
+      <article class="card" data-status="available" data-category="misc">
+        <div class="thumb"><img src="images/trinketDish2.png" alt="Cream white and blue dish with peacock design"></div>
+        <div class="caption">Trinket Bowl - $20</div>
+        <div class="caption" style="color: red;">NOT FOOD SAFE</div>
+      </article>
+      <article class="card" data-status="available" data-category="tumblers">
+        <div class="thumb"><img src="images/smallTumblers.png" alt="Two brown, yellow, and blue small tumblers"></div>
+        <div class="caption">Small Tumblers - $15 each</div>
+      </article>
+      <article class="card" data-status="available" data-category="vases">
+        <div class="thumb"><img src="images/Vase2.png" alt="Pink and blue vase"></div>
+        <div class="caption">Vase - $25</div>
+      </article>
+      <article class="card" data-status="available" data-category="vases">
+        <div class="thumb"><img src="images/Vase3.png" alt="Pink and dark blue vase"></div>
+        <div class="caption">Vase - $25</div>
+      </article>
+      <article class="card" data-status="available" data-category="vases">
+        <div class="thumb"><img src="images/Vase4.png" alt="Deep rust brown and blue vase"></div>
+        <div class="caption">Vase - $20</div>
+      </article>
+      <article class="card" data-status="available" data-category="tumblers">
+        <div class="thumb"><img src="images/StrawTrumbler.png" alt="Speckled ceramic tumbler with straw hole"></div>
+        <div class="caption">Straw Tumbler - $20</div>
+      </article>
+      <article class="card" data-status="available" data-category="vases">
+        <div class="thumb"><img src="images/Vase5.png" alt="Speckled ceramic and white vase"></div>
+        <div class="caption">Vase - $15</div>
+      </article>
+      <article class="card" data-status="available" data-category="misc">
+        <div class="thumb"><img src="images/TrinketSoapDish.png" alt="Trinket / Soap dish that is blue"></div>
+        <div class="caption">Trinket / Soap Dishes - $7 each</div>
+        <div class="caption" style="color: red;">NOT FOOD SAFE</div>
+      </article>
+      
     </section>
   </main>
 </body>
