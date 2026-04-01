@@ -87,18 +87,17 @@ nav ul li a {
   position: absolute;
   inset: -24px;
   transform: scale(1.03);
-  background-image: url("./images/pinecreekvalley.png");
+  background-image: url("./images/pinecreekvalley-blur.jpg");
   background-size: cover;
   background-position: center;
   will-change: transform, filter;
-  filter: blur(5px);
   z-index: 0;
   
   /* pick best image format per browser cuz png too phat */
   background-image: image-set(
-    url("./images/pinecreekvalley.avif") type("image/avif"),
-    url("./images/pinecreekvalley.webp") type("image/webp"),
-    url("./images/pinecreekvalley.jpg")  type("image/jpeg")
+    url("./images/pinecreekvalley-blur.avif") type("image/avif"),
+    url("./images/pinecreekvalley-blur.webp") type("image/webp"),
+    url("./images/pinecreekvalley-blur.jpg")  type("image/jpeg")
   );
 }
 .first::after {
