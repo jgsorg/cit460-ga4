@@ -1,3 +1,6 @@
+console.log("script.js loaded", location.pathname);
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('.hero');
   const availBtn = document.getElementById('availbtn');
@@ -101,4 +104,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setActiveChip('all');   
   applyViewFromHash();    
+});
+
+window.dataLayer = window.dataLayer || [];
+
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest('nav.itemsnav button.chip[data-filter]');
+  if (!btn) return;
+
+  window.dataLayer.push({
+    event: "filter_click",
+    filter_id: btn.getAttribute("data-filter"),
+    filter_label: (btn.textContent || "").trim(),
+    filter_group: "product_category",
+    filter_was_active: btn.classList.contains("is-active") ? "true" : "false"
+  });
 });
