@@ -84,3 +84,23 @@ form.addEventListener('submit', async (e) => {
 		formStatus.textContent = 'Network error—please try again in a moment.';
 	}
 });
+
+// ga4 / gtm
+window.dataLayer = window.dataLayer || [];
+
+document.addEventListener("click", function (e) {
+  const availableBtn = e.target.closest(".third-btn");
+  const archivedBtn = e.target.closest(".fourth-btn");
+
+  let section = null;
+  if (availableBtn) section = "available";
+  if (archivedBtn) section = "archived";
+  if (!section) return;
+
+  window.dataLayer.push({
+    event: "product_section_click",
+    section,
+    source_page: "home",
+    element_id: section === "available" ? "third-btn" : "fourth-btn"
+  });
+});

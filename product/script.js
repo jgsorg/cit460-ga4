@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
   applyViewFromHash();    
 });
 
+// filters
 window.dataLayer = window.dataLayer || [];
 
 document.addEventListener("click", function (e) {
@@ -118,5 +119,22 @@ document.addEventListener("click", function (e) {
     filter_label: (btn.textContent || "").trim(),
     filter_group: "product_category",
     filter_was_active: btn.classList.contains("is-active") ? "true" : "false"
+  });
+});
+
+// avail / archive
+window.dataLayer = window.dataLayer || [];
+
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest("#availbtn, #archivedbtn");
+  if (!btn) return;
+
+  const section = btn.id === "availbtn" ? "available" : "archived";
+
+  window.dataLayer.push({
+    event: "product_section_click",
+    section,
+    source_page: "product",
+    element_id: btn.id
   });
 });
