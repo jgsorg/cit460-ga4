@@ -216,23 +216,56 @@
                     <div class="two-col">
                         <label>
                         <span>First Name</span>
-                        <input name="firstName" placeholder="First Name" autocomplete="given-name" required />
+                        <input
+                            name="firstName"
+                            placeholder="First Name"
+                            autocomplete="given-name"
+                            required
+                            maxlength="40"
+                            pattern="^[A-Za-z][A-Za-z '\-]{0,38}[A-Za-z]$"
+                            title="Letters only (spaces, apostrophes, hyphens allowed)."
+                        />
                         </label>
 
                         <label>
                         <span>Last Name</span>
-                        <input name="lastName" placeholder="Last Name" autocomplete="family-name" required />
+                        <input
+                            name="lastName"
+                            placeholder="Last Name"
+                            autocomplete="family-name"
+                            required
+                            maxlength="40"
+                            pattern="^[A-Za-z][A-Za-z '\-]{0,38}[A-Za-z]$"
+                            title="Letters only (spaces, apostrophes, hyphens allowed)."
+                        />
                         </label>
                     </div>
 
                     <label>
                         <span>Email Address</span>
-                        <input name="email" type="email" placeholder="Email Address" autocomplete="email" required />
+                        <input
+                            name="email"
+                            type="email"
+                            placeholder="Email Address"
+                            autocomplete="email"
+                            required
+                            maxlength="254"
+                        />
                     </label>
 
                     <label>
                         <span>Message</span>
-                        <textarea name="message" rows="7" placeholder="Message..." required></textarea>
+                        <textarea
+                            name="message"
+                            rows="7"
+                            placeholder="Message..."
+                            required
+                            minlength="10"
+                            maxlength="2000"
+                            pattern="^[\s\S]{10,2000}$"
+                            title="Message must be between 10 and 2000 characters."
+                        ></textarea>
+
                     </label>
 
                     <button class="formbtn" type="submit">Send message</button>
