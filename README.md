@@ -12,6 +12,7 @@ This application consists of an interactive website that will track user events 
 - CSS
 - JavaScript
 - Google Analytics 4
+- Google Tag Manager
 
 ## Features
 
@@ -36,8 +37,7 @@ This application consists of an interactive website that will track user events 
 │ └── script.js
 └── 
 
-Structure is not 100% accurate as the server hosting I am using has github repo syncing, in order for the site to display as I want it for the time being, there is a placeholder index.html a directory above the main files.
-```
+Structure is not 100% accurate as the server hosting I am using has github repo syncing, files shown in project structure are the ones primarily used for the time being.
 ## Author
 
 ** Julia Sorgen **
