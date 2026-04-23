@@ -541,3 +541,172 @@ nav ul li a {
   pointer-events: none;
   display: none;
 }
+@media (max-width: 900px) {
+  nav {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .logo {
+    height: 54px;
+    margin-left: 0;
+  }
+
+  nav ul {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+
+  nav ul li {
+    margin: 0;
+    padding: 8px 12px;
+  }
+
+  .word-top,
+  .word-bottom {
+    font-size: clamp(40px, 9vw, 64px);
+    white-space: normal;
+    text-align: center;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  .word-top { top: 22%; }
+  .word-bottom { bottom: 22%; }
+
+  .dots {
+    width: 180px;
+  }
+
+  .dots-top {
+    left: 50%;
+    top: 34%;
+    transform: translateX(-50%);
+  }
+
+  .dots-bottom {
+    left: 50%;
+    right: auto;
+    bottom: 18%;
+    transform: translateX(-50%);
+  }
+
+  .second {
+    height: auto;
+    padding-bottom: 30px;
+  }
+
+  .second h2 {
+    font-size: clamp(34px, 8vw, 56px);
+    margin-top: 2rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 18px;
+    padding: 1.25rem;
+  }
+
+  .about-content img {
+    width: min(520px, 100%);
+    margin-left: 0;
+  }
+
+  .third,
+  .fourth {
+    display: block;
+    height: auto;
+  }
+
+  .third-right,
+  .fourth-left {
+    display: none;
+  }
+
+  .third-left,
+  .fourth-right {
+    width: 100%;
+    padding: 44px 18px;
+  }
+
+  .fifth p {
+    font-size: 1.1rem;
+    padding: 0 12px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 12px 28px;
+  }
+
+  .content .left,
+  .fifth .right,
+  .fifth .left {
+    width: 100%;
+  }
+
+  .content ul li {
+    padding: 14px 0;
+    justify-content: center;
+  }
+
+  .content ul li i {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 3.25rem;
+    flex: 0 0 3.25rem;
+  }
+
+  .content ul li a {
+    font-size: 1.35rem;
+  }
+
+  #contactForm {
+    width: min(620px, 100%);
+    padding: 22px;
+  }
+
+  #contactForm .two-col {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .third a,
+  .fourth a,
+  .third-btn,
+  .fourth-btn,
+  .formbtn {
+    width: min(320px, 92%);
+  }
+
+  .gridwrapper {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+@media (max-width: 900px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .first::before {
+    inset: 0;
+    transform: none;
+  }
+
+  .first-vector {
+    width: 100vw;
+  }
+}
