@@ -1,4 +1,13 @@
-// confetti code adapted from my own site, juliasorgen.com :p
+/*
+	contact form handling and confettiiii
+	- no page reload on form submit
+	- user feedback on form status
+	- confettiii
+	- GTM click tracking (for avail/archive, potentially add more later)
+
+	confetti code from from my own site, juliasorgen.com, hence the lack of comments for it
+
+*/
 
 const form = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
@@ -56,8 +65,9 @@ function launchConfetti() {
 	frame();
 }
 
+// form submission
 form.addEventListener('submit', async (e) => {
-	e.preventDefault();
+	e.preventDefault(); // NO page reload
 	formStatus.textContent = 'Sending...';
 
 	const data = new FormData(form);
@@ -78,16 +88,17 @@ form.addEventListener('submit', async (e) => {
 			const out = await res.json().catch(() => null);
 			formStatus.textContent =
 				out?.errors?.[0]?.message ||
-				'Oops...something went wrong. Please try again or email me directly.';
+				'Oops...something went wrong. Please try again.';
 		}
 	} catch {
-		formStatus.textContent = 'Network error—please try again in a moment.';
+		formStatus.textContent = 'Network error, please try again in a moment.';
 	}
 });
 
 // ga4 / gtm
 window.dataLayer = window.dataLayer || [];
 
+// tracks available and archive button clicks as product_section_click. also will track the source_page (home in this case)
 document.addEventListener("click", function (e) {
   const availableBtn = e.target.closest(".third-btn");
   const archivedBtn = e.target.closest(".fourth-btn");

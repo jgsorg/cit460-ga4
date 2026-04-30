@@ -13,6 +13,7 @@ This application consists of an interactive website that will track user events 
 - JavaScript
 - Google Analytics 4
 - Google Tag Manager
+- Google Data Studio
 
 ## Features
 
